@@ -1,0 +1,86 @@
+# Configuration for 'repo_helper' (https://github.com/domdfcoding/repo_helper)
+---
+modname: 'coincidence'
+copyright_years: '2020-2021'
+author: 'Dominic Davis-Foster'
+email: 'dominic@davis-foster.co.uk'
+username: 'python-coincidence'
+assignee: 'domdfcoding'
+version: '0.6.6'
+license: 'MIT'
+short_desc: 'Helper functions for pytest.'
+primary_conda_channel: domdfcoding
+
+conda_channels:
+ - conda-forge
+
+min_coverage: 100
+requires_python: 3.6
+use_whey: true
+docs_fail_on_warning: true
+
+python_versions:
+ - '3.6'
+ - '3.7'
+ - '3.8'
+ - '3.9'
+ - '3.10'
+ - '3.11'
+ - '3.12'
+ - 3.13-dev
+ - pypy36
+ - pypy37
+ - pypy38
+ - pypy39
+
+classifiers:
+ - 'Development Status :: 4 - Beta'
+ - 'Framework :: Pytest'
+ - 'Intended Audience :: Developers'
+ - 'Topic :: Software Development :: Libraries :: Python Modules'
+ - 'Topic :: Software Development :: Quality Assurance'
+ - 'Topic :: Software Development :: Testing'
+ - 'Topic :: Software Development :: Testing :: Unit'
+
+keywords:
+ - utilities
+ - pytest
+ - testing
+ - unittest
+ - regression
+
+sphinx_conf_epilogue:
+ - nitpicky = True
+ - needspace_amount = r"5\baselineskip"
+ - 'favicons = [{"rel": "icon", "href": "https://python-coincidence.github.io/assets/coincidence.ico",  "sizes": "48x48", "type": "image/vnd.microsoft.icon"}]'
+ - toctree_plus_types.add("fixture")
+ - html_logo = "../coincidence.png"
+ - latex_elements["preamble"] = "\\usepackage{soul}"
+ - changelog_sections_numbered = False
+ - ignore_missing_xrefs = [
+ - '    "^pytest_regressions\\.file_regression\\.FileRegressionFixture$",'
+ - '    "^pytest_regressions\\.data_regression\\.DataRegressionFixture$",'
+ - '    "^coincidence\\.(utils|params)\\._T$",'
+ - '    "^_pytest\\.",'
+ - "]"
+
+intersphinx_mapping:
+ - "'pytest': ('https://docs.pytest.org/en/stable', None)"
+ - "'pytest-regressions': ('https://pytest-regressions.readthedocs.io/en/latest/', None)"
+
+extra_sphinx_extensions:
+ - sphinx_autofixture
+ - internal_autoprotocol
+ - local_extension
+ - sphinx_favicon
+ - sphinx_toolbox.latex.succinct_seealso
+ - sphinx_toolbox.more_autosummary.column_widths
+ - sphinx_toolbox_experimental.changelog
+ - sphinx_toolbox_experimental.missing_xref
+
+#entry_points:
+# pytest11:
+#  - "coincidence = coincidence"
+
+exclude_files:
+ - contributing

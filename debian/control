@@ -1,15 +1,55 @@
-Source: template-repository
-Section: unknown
+Source: python-coincidence
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>
+Rules-Requires-Root: no
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               pybuild-plugin-pyproject,
+               python3-all,
+               python3-coverage,
+               python3-domdf-python-tools,
+               python3-importlib-metadata,
+               python3-iniconfig,
+               python3-pytest,
+               python3-pytest-cov,
+               python3-pytest-datadir,
+               python3-pytest-regressions,
+               python3-pytest-timeout,
+               python3-setuptools,
+               python3-toml,
+               python3-typing-extensions,
+               python3-whey
+Standards-Version: 4.6.2
+Homepage: https://github.com/python-coincidence/coincidence
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-coincidence
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-coincidence.git
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-coincidence
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends}
+Description: helper functions for pytest
+ The package provides fixtures and decorators for Pytest, making it easier
+ configure test environments and parameterize tests. The module also enables
+ specific utilities for regression testing and Pytest Decorators for selective
+ test execution.
+ .
+ Some of the key features include:
+       - fixed_datetime: Allows you to set the current date and time to
+         facilitate tests that depend on timestamps.
+       - path_separator: Returns the current file system path separator,
+         useful for dealing with cross-platform differences.
+       - tmp_pathplus: Provides a unique temporary directory for each test
+         invocation as a PathPlus object.
+       - count: generates a parameterized list of numbers between a specified
+         range.
+       - whitespace_perms: Generates permutations of whitespace characters to
+         test space-related behaviors.
+       - testing_boolean_values: Generates a parameterized list of strings,
+         integers and booleans, facilitating the testing of boolean values
+       - param: specifies parameters in pytest.mark.parametrize calls or in
+         parameterized fixtures.
+       - parametrized_versions: Provides a parameterized list of Python
+         versions to test in different environments.
