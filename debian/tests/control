@@ -1,0 +1,12 @@
+Test-Command: python3 -m pytest -v
+Depends: python3-all,
+         python3-domdf-python-tools,
+         python3-importlib-metadata,
+         python3-pytest,
+         python3-pytest-cov,
+         python3-pytest-datadir,
+         python3-pytest-regressions,
+         python3-pytest-timeout,
+         python3-toml,
+         @
+Restrictions: allow-stderr

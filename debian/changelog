@@ -1,5 +1,24 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-coincidence (0.6.6-2) unstable; urgency=medium
 
-  * Initial release
+  * debian/control: Added Build-Depends which was missing
+  * debian/patches: Build-Depends "python3-whey" is already in Debian
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Sun, 07 Apr 2024 07:14:47 -0300
+
+python-coincidence (0.6.6-1) unstable; urgency=medium
+
+  * New upstream version 0.6.6
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Tue, 12 Mar 2024 21:41:54 -0300
+
+python-coincidence (0.6.5-2) unstable; urgency=medium
+
+  * debian/control: corrected Vcs repository url
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Mon, 18 Dec 2023 21:12:18 -0300
+
+python-coincidence (0.6.5-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #1043533)
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Tue, 07 Nov 2023 20:10:08 -0300
